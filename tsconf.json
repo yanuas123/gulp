@@ -1,0 +1,12 @@
+{
+    "files": [
+        "temp/ts/index.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "ES5",
+        "locale": "ru",
+        "newLine": "lf",
+        "removeComments": true
+    }
+}

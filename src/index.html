@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('./partials/head.html')
+	<body>
+		<div>
+			<header>
+
+			</header>
+			<main>
+
+			</main>
+			<footer>
+
+			</footer>
+			@@if (state === 'test' && false) {
+			<div class="mock mock1"></div>
+			}
+		</div>
+		<!-- loader block -->
+		<div class="loader" id="loader">
+			<span class="loader_ico"></span>
+		</div>
+		@@include('./partials/popups/local-popup.html')
+		@@include('./partials/popups/tooltip.html')
+		@@include('./partials/popup-wrap.html')
+		@@include('./partials/script.html')
+	</body>
+</html>

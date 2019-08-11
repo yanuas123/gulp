@@ -1,0 +1,164 @@
+// colors
+
+
+
+// icons
+
+
+
+// z-index
+
+
+
+
+
+// mixin -----------------------------------------------------------------------
+
+@mixin flex_center() {
+	display: flex;
+	align-items: center;
+}
+@mixin absolute($top:0, $left:0, $z:auto) {
+	position: absolute;
+	z-index: $z;
+	top: $top;
+	left: $left;
+}
+
+@mixin bg_cover($url:"no", $pos:center) {
+	background-position: $pos;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@if($url != "no") {
+		background-image: $url;
+	}
+}
+@mixin bg_contain($url:"no", $pos:center) {
+	background-position: $pos;
+	background-repeat: no-repeat;
+	background-size: contain;
+	@if($url != "no") {
+		background-image: $url;
+	}
+}
+@mixin bg_auto($url:"no", $pos:center) {
+	background-position: $pos;
+	background-repeat: no-repeat;
+	background-size: auto;
+	@if($url != "no") {
+		background-image: $url;
+	}
+}
+@mixin border($intens, $side1:"no", $side2:"no") {
+	@if $intens == "normal" {
+		$intens: $grey_line;
+	} @else {
+		$intens: $grey_line_light;
+	}
+	@if $side1 != "no" {
+		border-#{$side1}: 1px solid $intens;
+	}
+	@if $side2 != "no" {
+		border-#{$side2}: 1px solid $intens;
+	}
+}
+
+@mixin fonts($family:arial, $size:1rem, $weight:400, $height:normal) {
+	font-family: $family, sans-serif;
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $height;
+}
+
+@mixin transition($elem:all, $time:0.3s) {
+	transition: $elem $time ease;
+}
+// end Mixin -------------------------------------------------------------------
+
+// form ------------------------------------------------------------------------
+
+%form_colors {
+	
+}
+%form_colors:hover {
+	
+}
+%form_colors:focus {
+	
+}
+%form_colors:disabled {
+	
+}
+%form_colors::placeholder {
+	
+}
+%form_colors:hover::placeholder {
+	
+}
+%form_colors:disabled::placeholder {
+	
+}
+%form_colors:hover:disabled::placeholder {
+	
+}
+%form_structure {
+	
+}
+@mixin radio_check_structure($type:"check") {
+	display: none;
+
+	&+.label {
+		display: flex;
+		align-items: flex-start;
+		cursor: pointer;
+	}
+	&+.label:before {
+		content: "";
+		display: block;
+		box-sizing: border-box;
+		flex-shrink: 0;
+		@if($type == "radio") {
+			border-radius: 100%;
+		}
+	}
+	&:disabled {
+		&+.label {
+			
+
+			&:before {
+				
+			}
+		}
+	}
+	&:checked {
+		&+.label {
+			
+
+			&:before {
+				
+			}
+		}
+		&:disabled+.label {
+			
+
+			&:before {
+				
+			}
+		}
+	}
+	&:not(:checked):not(:disabled)+.label:hover {
+		
+
+		&:before {
+			
+		}
+		@media (hover: none) {
+			
+
+			&:before {
+				
+			}
+		}
+	}
+}
+// end Form --------------------------------------------------------------------

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg_google" version="1.1" viewBox="0 0 66.165833 66.165833" xmlns="http://www.w3.org/2000/svg">
+ <title>Google+ icon</title>
+ <defs>
+  <linearGradient id="linearGradient2493" x1="-329.66211" x2="-181.98633" y1="-208.7998" y2="-61.124023" gradientTransform="matrix(.26458333 0 0 .26458333 -191.24475 111.28883)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#000000" stop-opacity=".52364865" offset="0"/>
+   <stop stop-color="#000000" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2509" x1="-252.49797" x2="-252.49797" y1="36.394131" y2="98.133392" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#e67f76" class="color-stop-color" offset="0"/>
+   <stop stop-color="#b03b30" class="color-stop-color" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(289.64506,-32.537086)">
+  <g transform="matrix(1.074691,0,0,1.074691,21.633142,-7.3714757)">
+   <circle cx="-258.86072" cy="67.918571" r="30.377474" fill="#dd5044" stroke="url(#linearGradient2509)" stroke-width=".79374999" style="paint-order:markers stroke fill"/>
+   <path d="m-267.1104 53.829289c-7.66054 0-13.87099 6.319549-13.87099 14.114899 0 3.942181 1.58821 7.507229 4.1491 10.068121l20.19825 20.19825a30.377474 30.377474 0 0 0 27.604-24.648108l-11.60601-11.606008h-3.97598v4.069h-4.06901v0.0987l-8.66148-8.661487c-2.6049-2.499897-5.93681-3.632235-9.76685-3.632338h-5.3e-4z" fill="url(#linearGradient2493)" opacity=".52399998" style="paint-order:markers stroke fill"/>
+   <path d="m-267.1104 53.829289c-7.66054 0-13.87099 6.319549-13.87099 14.114899s6.21045 14.114902 13.87099 14.114902c4.99051 0 7.88256-1.570562 10.39264-4.124812 2.51009-2.554261 3.42409-6.417474 3.42409-10.315133 0-0.594651-0.0383-1.185992-0.10542-1.770951h-13.54285v4.990393h7.95455c-0.32315 1.24423-0.87128 2.377982-1.73425 3.256132-1.54545 1.57267-3.32643 2.540413-6.3991 2.540413-4.71663 0-8.54056-3.891333-8.54056-8.690944 0-4.799618 3.82393-8.690424 8.54056-8.690424 2.29454 0 4.2947 0.666813 5.87871 2.120283l3.90519-3.905186-6e-3 -0.0062c-2.60501-2.50001-5.9371-3.632337-9.76736-3.632337zm22.49837 8.127154v4.069h-4.06901v3.975468h4.06901v4.069519h3.97598v-4.069519h4.069v-3.975468h-4.069v-4.069zm-15.23422 1.154451c2e-3 3e-3 5e-3 0.0082 6e-3 0.01188v-0.0052z" fill="#ffffff" style="paint-order:markers stroke fill"/>
+  </g>
+ </g>
+</svg>

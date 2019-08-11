@@ -1,0 +1,20 @@
+{
+    "files": [
+        "src/ts/@types/global.d.ts",
+        "src/ts/@types/js-global.d.ts",
+        "src/ts/index.tslink.ts",
+        "src/ts/plug-modules/range-filter.ts",
+        "src/ts/plug-modules/tooltip.ts",
+        "src/ts/plug-modules/tobuffer-copy.ts",
+        "src/ts/plug-modules/load-more.ts",
+        "src/ts/plug-modules/popup.ts",
+        "src/ts/plug-modules/local-popup.ts",
+        "src/ts/plug-modules/validation.ts",
+        "src/ts/plug-modules/select-countries.ts",
+        "src/ts/plug-modules/ajax.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "ES5"
+    }
+}

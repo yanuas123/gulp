@@ -1,0 +1,504 @@
+/* fonts */
+
+
+/* ========================================================================== */
+/* STANDARD ELEMENTS ======================================================== */
+
+/* loader */
+.loader {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: $z_loader;
+	top: 0;
+	right: 0;
+	background-color: rgba(130, 112, 81, 0.5);
+	display: none;
+	align-items: center;
+	justify-content: center;
+
+	&.open {
+		display: flex;
+	}
+	.loader_ico {
+		display: block;
+		width: 70px;
+		height: 70px;
+		@include bg_contain($loader);
+	}
+}
+
+body {
+	
+}
+
+/* text properties ---------------------------------------------------------- */
+h1, .h1 {
+	
+	text-transform: uppercase;
+}
+h2, .h2 {
+	
+	text-transform: uppercase;
+}
+h3, .h3 {
+	
+	text-transform: uppercase;
+}
+h4, .h4 {
+	
+}
+h5, .h5 {
+	
+}
+h6, .h6 {
+	
+}
+b, .bold {
+	
+}
+strong {
+	
+}
+em {
+	
+}
+i, .italic {
+	
+}
+q {
+	
+}
+u, .underline {
+	text-decoration: underline;
+}
+mark {
+	
+}
+small, .small-text {
+	
+}
+dfn {
+	
+}
+blockquote {
+	
+}
+hr, .hr {
+	margin: 8px 0;
+	border: none;
+	@include border("normal", top);
+}
+.text_important {
+	
+}
+.image-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.image-contain {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* link */
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	
+	@media (hover: none) {
+		
+	}
+}
+/* end Text properties ------------------------------------------------------ */
+
+/* forms ==================================================================== */
+.fieldset {
+	display: flex;
+	flex-direction: column;
+
+	.legend {
+		width: 100%;
+	}
+}
+.datalist {
+
+	.option {
+
+	}
+}
+
+/* validation */
+.input-parent {
+	display: flex;
+	flex-direction: column;
+
+	.text-empty, .text-invalid, .server-text-invalid {
+		display: none;
+	}
+	&.invalid .text-invalid, &.empty .text-empty, &.invalid-server .server-text-invalid {
+		display: block;
+	}
+	&.invalid, &.empty, &.invalid-server {
+		input[type='text'], input[type='password'], input[type='date'], input[type='email'], input[type='number'], input[type='search'], input[type='tel'], input[type='url'], textarea, select {
+			
+		}
+	}
+}
+/* end Validation */
+
+.input-wrap {
+	@include flex_center();
+	@media screen and (max-width: 992px) {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.label {
+		flex-shrink: 0;
+		@media screen and (max-width: 992px) {
+			
+		}
+	}
+	.input, .textarea, .select {
+		
+	}
+}
+.required-sign {
+	
+}
+
+.label {
+	
+}
+.btn, .button, .label.btn {
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	&:hover {
+		text-decoration: none;
+		
+		@media (hover: none) {
+			
+		}
+	}
+	&:disabled {
+		
+		cursor: default;
+	}
+}
+
+.input, .textarea, .select {
+	@extend %form_structure;
+	@extend %form_colors;
+}
+.select {
+
+	&.placeholder {
+		option:disabled:nth-child(1) {
+			color: transparent !important;
+		}
+	}
+}
+.textarea {
+	width: 100%;
+}
+.input.file {
+	display: none;
+}
+.input.file:disabled+.label.btn {
+	cursor: default;
+}
+
+/* checkbox - radio ----------------------- */
+.checkbox {
+	@include radio_check_structure("check");
+}
+
+.radio {
+	@include radio_check_structure("radio");
+}
+
+/* range filter --------------------------- */
+.range-filter {
+	padding-top: 1.86rem;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	.range_space {
+		width: 100%;
+		height: 0.19rem;
+
+		.range_inner-space {
+			height: 100%;
+			position: relative;
+		}
+	}
+	.range-point {
+		width: 1.03rem;
+		height: 1.03rem;
+		border-radius: 50%;
+		position: absolute;
+		z-index: $z_range_point;
+		top: 50%;
+		cursor: pointer;
+		padding: 0.13rem;
+		background-clip: content-box;
+
+		&.range_start-point {
+			left: 0;
+			transform: translate(-50%, -50%);
+		}
+		&.range_end-point {
+			right: 0;
+			transform: translate(50%, -50%);
+		}
+		.range-point_data {
+			position: absolute;
+			top: -246%;
+
+			&.range_start-point_data {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			&.range_end-point_data {
+				right: 50%;
+				transform: translateX(50%);
+			}
+		}
+	}
+}
+
+
+.text-btn {
+	display: inline;
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+/* end Forms ================================================================ */
+
+/* icon buttons ============================================================= */
+
+
+.btn-icon {
+	display: inline-block;
+	padding: 2px;
+	background-origin: content-box;
+	@include transition();
+	@include bg_contain();
+
+	&.icon-color-custom:hover:not(.disabled) {
+		
+
+		@media (hover: none) {
+			filter: none;
+		}
+	}
+	&.icon-color-custom.active:not(.disabled) {
+		
+	}
+	&.icon-color-start.icon-color-custom {
+		
+	}
+	&.icon-color-start:hover:not(.disabled) {
+		
+		@media (hover: none) {
+			
+		}
+	}
+	&.icon-color-custom.disabled, &.icon-color.disabled {
+		cursor: default;
+	}
+	&.icon-color-start.disabled:not(.icon-color-custom):not(.icon-color) {
+		cursor: default;
+	}
+}
+.icon {
+	display: inline-block;
+	@include bg_contain();
+	background-origin: content-box;
+
+	&.icon-color-custom {
+		
+	}
+}
+@mixin icon_color($filter_black) {
+	&.btn-icon {
+		
+
+		&:hover:not(.disabled) {
+			filter: none;
+
+			@media (hover: none) {
+				
+			}
+		}
+		&.active:not(.disabled) {
+			filter: none;
+		}
+		&.icon-color-start {
+			filter: none;
+		}
+	}
+}
+
+
+/* end Icon buttons ========================================================= */
+
+/* structure blocks ========================================================= */
+
+.vertical-row-center {
+	@include flex_center();
+}
+.space-between {
+	@include flex_center();
+	justify-content: space-between;
+}
+
+/* end Structure blocks ===================================================== */
+
+/* POP-UP structure ========================================================= */
+
+body.noscroll {
+	overflow: hidden;
+}
+.popup-wrap {
+	display: none;
+	opacity: 0;
+	pointer-events: none;
+	@include transition(opacity, 0.4s);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z_popup;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	.back-wall {
+		@include absolute(0, 0, $z_popup_back);
+		opacity: 0.4;
+		width: 100%;
+		height: 100%;
+		background-color: $black;
+	}
+	.popups-block_wrap {
+		@include absolute(0, 0, $z_popup_wrap);
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		.popups-frame_wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100%;
+		}
+		.popups-frame {
+			max-width: calc(100% - 12px);
+			min-width: 200px;
+			min-height: 100px;
+
+			.close-button-row {
+				display: flex;
+				justify-content: flex-end;
+
+				.close-btn {
+					
+				}
+			}
+			.popups-window {
+				max-width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+	&.display-popup {
+		display: block;
+	}
+	&.animate-popup {
+		opacity: 1;
+		pointer-events: auto;
+		@include transition(opacity, 0.4s);
+	}
+}
+.popup-window {
+	display: none;
+	max-width: 100%;
+
+	&.popup-retreat {
+		
+		@media screen and (max-width: 479px) {
+			
+		}
+	}
+	.h4, .h5, .h6 {
+		width: auto;
+	}
+	.input-parent, .input, .select, .textarea {
+		
+	}
+	.text-empty, .text-invalid, .server-text-invalid {
+		
+	}
+	&.display-popup {
+		display: block;
+	}
+	.checkbox+.label, .radio+.label {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.label {
+		
+	}
+}
+
+.local-popup-wrap {
+
+	&>* {
+		position: absolute;
+		z-index: $z_local_popup;
+	}
+	.local-popup {
+		padding: 0.48rem;
+		max-width: calc(100% - 12px);
+	}
+}
+
+/* end POP-UP structure ===================================================== */
+
+/* tooltip ------------------------------------------------------------------ */
+
+.tooltip {
+	@include absolute(0, 0, $z_tooltip);
+	min-width: 100px;
+	max-width: 90vw;
+	text-align: center;
+	opacity: 1;
+	@include transition(opacity, 0s);
+
+	&.hidden-tooltip {
+		opacity: 0;
+		pointer-events: none;
+		@include transition(opacity, 1.6s);
+	}
+}
+
+/* end Tooltip -------------------------------------------------------------- */
+
+/* end STANDARD ELEMENTS ==================================================== */
